@@ -97,5 +97,44 @@ fun AktivitasPertama(modifier: Modifier) {
                 }
             }
         }
+        Card(
+            modifier = Modifier
+                .fillMaxWidth(fraction = 1f)
+                .padding(all = 12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.Green
+            )
+        ) {
+            Row {
+                val gambar = painterResource(id = R.drawable.logo_umy)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(size = 100.dp)
+                        .padding(all = 5.dp)
+                )
+                Spacer(modifier = Modifier.width(width = 30.dp))
+                Column() {
+                    Text(
+                        text = stringResource(id = R.string.nama), // Menggunakan nama yang sama
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Default,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text(
+                        text = stringResource(id = R.string.alamat2), // Alamat dari strings.xml
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                    )
+                    Text(
+                        text = stringResource(id = R.string.no2), // Nomor HP dari strings.xml
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                    )
+                }
+            }
+        }
     }
 }
