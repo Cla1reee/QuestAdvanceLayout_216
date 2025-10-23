@@ -1,13 +1,14 @@
-package com.example.MyApplication
+// kotlin
+package com.example.myapplication
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.R
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -24,16 +25,14 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.MyApplication.drawable
 
 @Composable
-fun AktivitasPertama(modifier: Modifier) {
-    Column(
-        modifier = Modifier
+fun AktivitasPertama(modifier: Modifier = Modifier) {
+    Column (modifier = modifier
             .padding(top = 100.dp)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
-    ) {
+        ) {
         Text(
             text = stringResource(id = R.string.prodi),
             fontSize = 35.sp,
@@ -107,12 +106,12 @@ fun AktivitasPertama(modifier: Modifier) {
                         modifier = Modifier.padding(top = 15.dp)
                     )
                     Text(
-                        text = stringResource(id = R.string.alamat1), // Alamat dari strings.xml
+                        text = stringResource(id = R.string.alamat1),
                         fontSize = 20.sp,
                         color = Color.Yellow,
                     )
                     Text(
-                        text = stringResource(id = R.string.no1), // Nomor HP dari strings.xml
+                        text = stringResource(id = R.string.no1),
                         fontSize = 20.sp,
                         color = Color.Yellow,
                     )
@@ -139,19 +138,19 @@ fun AktivitasPertama(modifier: Modifier) {
                 Spacer(modifier = Modifier.width(width = 30.dp))
                 Column() {
                     Text(
-                        text = stringResource(id = R.string.nama), // Menggunakan nama yang sama
+                        text = stringResource(id = R.string.nama),
                         fontSize = 30.sp,
                         fontFamily = FontFamily.Default,
                         color = Color.White,
                         modifier = Modifier.padding(top = 15.dp)
                     )
                     Text(
-                        text = stringResource(id = R.string.alamat2), // Alamat dari strings.xml
+                        text = stringResource(id = R.string.alamat2),
                         fontSize = 20.sp,
                         color = Color.Yellow,
                     )
                     Text(
-                        text = stringResource(id = R.string.no2), // Nomor HP dari strings.xml
+                        text = stringResource(id = R.string.no2),
                         fontSize = 20.sp,
                         color = Color.Yellow,
                     )
@@ -171,4 +170,3 @@ fun AktivitasPertama(modifier: Modifier) {
         }
     }
 }
-
